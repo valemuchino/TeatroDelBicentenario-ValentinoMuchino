@@ -243,7 +243,7 @@ h2 {
 
 footer {
     grid-area: footer;
-    background-color: #7f5539;
+    background-image: linear-gradient(to right, #7f5539, #b08968);
     border-top: 0.1rem solid white;
     padding: 0.5rem;
     display: flex;
