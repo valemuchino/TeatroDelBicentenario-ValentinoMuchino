@@ -40,7 +40,7 @@
 
 header {
     grid-area: header;
-    background-color: #7f5539;
+    background-image: linear-gradient(to right, #7f5539, #b08968);
     padding: 0.8rem;
     border-bottom: 0.1rem solid white;
     position: relative;
