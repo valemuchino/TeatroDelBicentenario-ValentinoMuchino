@@ -287,6 +287,21 @@ footer a:hover {
     font-family: "NanumGothic-Regular";
     text-align: center;
     display: flex;
+    animation-duration: 2s;
+    animation-name: copyright;
+    animation-iteration-count: infinite;
+}
+
+@keyframes copyright {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @media screen and (min-width: 768px) {
