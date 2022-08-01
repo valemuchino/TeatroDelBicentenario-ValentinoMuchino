@@ -1,0 +1,488 @@
+/* Reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+
+/* Indicar fuentes a elegir */
+@font-face {
+    font-family: "NanumGothic-Regular";
+    src: url(../assets/fonts/NanumGothic-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Inter-Medium";
+    src: url(../assets/fonts/Inter-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Inter-Bold";
+    src: url(../assets/fonts/Inter-Bold.ttf);
+}
+
+/* Empieza */
+
+#grilla {
+    display: grid;
+    grid-template-rows: 85px 440px 40px 1275px 250px;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "header"
+    "main"
+    "encabezado"
+    "fotos"
+    "footer" ;
+}
+
+header {
+    grid-area: header;
+    background-color: #7f5539;
+    padding: 0.8rem;
+    border-bottom: 0.1rem solid white;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+div.logo {
+    display: flex;
+    align-self: center;
+}
+
+div.menu {
+    color: white;
+    font-size: 1.8rem;
+    display: flex;
+    align-self: center;
+}
+
+.enlaces {
+    display: none;
+}
+
+.mainIndex {
+    grid-area: main;
+    background-image: url(../assets/img/3.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.titulo1 {
+    font-family: "Inter-Bold";
+    color: white;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.textoPrincipal {
+    font-family: "NanumGothic-Regular";
+    color: white;
+    font-size: 1rem;
+    text-align: right;
+    padding: 1rem;
+}
+
+.textoDestacado {
+    font-family: "NanumGothic-Regular";
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bolder;
+    padding: 1rem;
+}
+
+.reservarVisita {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4rem;
+    border-radius: 7px;
+    font-family: "Inter-Bold";
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.visitaGuiada {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.titulo2 {
+    grid-area: encabezado;
+    font-family: "Inter-Bold";
+    font-size: 1.3rem;
+    text-align: center;
+    background-color: #7f5539;
+    color: white;
+    border-bottom: 0.1rem solid white;
+    border-top: 0.1rem solid white;
+    padding: 0.2rem 0;
+}
+
+.galeriaDeFotos {
+    grid-area: fotos;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+    "img1""img1""img2""img3""img4""img4""img5""img6";
+    overflow: hidden;
+    background-color: #ede0d4;
+    justify-content: center;
+    align-content: center;
+    padding: 1rem;
+    grid-row-gap: 1rem;
+}
+
+.item1 {
+    grid-area: img1;
+    background-image: url(../assets/img/b1.jpeg);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.item2 {
+    grid-area: img2;
+    background-image: url(../assets/img/b2.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.item3 {
+    grid-area: img3;
+    background-image: url(../assets/img/b3.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.item4 {
+    grid-area: img4;
+    background-image: url(../assets/img/b4.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.item5 {
+    grid-area: img5;
+    background-image: url(../assets/img/b5.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.item6 {
+    grid-area: img6;
+    background-image: url(../assets/img/b6.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #7f5539;
+    border-top: 0.1rem solid white;
+    padding: 0.5rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.footerLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redesSociales {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.footerEnlaces {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer i {
+    padding: 0.5rem;
+}
+
+footer a {
+    color: white;
+    font-family: "NanumGothic-Regular";
+}
+
+footer a:hover {
+    color: black;
+}
+.copyright {
+    color: white;
+    font-family: "NanumGothic-Regular";
+    text-align: center;
+    display: flex;
+}
+
+@media screen and (min-width: 768px) {
+    
+    #grilla {
+        display: grid;
+        grid-template-areas:
+        "header header"
+        "main main"
+        "encabezado encabezado"
+        "fotos fotos"
+        "footer footer";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 95px 550px 50px 1050px 250px;
+    }
+    
+    header {
+        padding: 1rem;
+    }
+    
+    .mainIndex {
+        justify-content: end;
+    }
+    
+    .visitaGuiada {
+        display: flex;
+        flex-flow: column wrap;
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .enlaces {
+        display: none;
+    }
+
+    .titulo1 {
+        font-size: 2.3rem;
+        padding: 0;
+    }
+
+    .textoPrincipal {
+        font-size: 1.2rem;
+        padding-left: 5rem;
+    }
+
+    .textoDestacado {
+        font-size: 1.4rem;
+    }
+
+    .reservarVisita {
+        font-size: 1.4rem;
+        padding: 0.5rem;
+    }
+
+    .titulo2 {
+        font-size: 1.7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .galeriaDeFotos {
+        grid-area: fotos;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas:
+        "img1 img2"
+        "img1 img2"
+        "img1 img3"
+        "img4 img4"
+        "img4 img4"
+        "img5 img6"
+        "img5 img6";
+        overflow: hidden;
+        background-color: #ede0d4;
+        justify-content: center;
+        align-content: center;
+        padding: 1rem;
+        grid-gap: 1rem;
+    }
+    
+    .noticiaVideo {
+        display: grid;
+        
+    }
+
+    .redesSociales {
+        font-size: 2rem;
+    }
+
+    .footerEnlaces {
+        font-size: 1.3rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+    
+        #grilla {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 110px 600px 50px 1400px 250px;
+            grid-template-areas:
+            "header header header"
+            "main main main"
+            "encabezado encabezado encabezado"
+            "fotos fotos fotos"
+            "footer footer footer";
+        }
+        
+        header {
+            padding: 1.5rem;
+        }
+    
+        div.menu {
+            display: none;
+        }
+        
+        .enlaces {
+            display: flex;
+            align-self: center;
+        }
+    
+        ul {
+            font-size: 0;
+        }
+        
+        ul li {
+            display: inline-block;
+            position: relative;
+            font-family: "Inter-Bold";
+            font-size: 1.7rem;
+            text-transform: capitalize;
+            padding-right: 1.2rem;
+            padding-left: 1.2rem;
+        }
+        
+        li a {
+            color: #fff;
+        }
+        
+        li a:hover {
+            color: black;
+        }
+        
+        ul li ul li a {
+            color: black;
+        }
+        
+        ul li ul li a:hover {
+            color: white;
+        }
+        
+        ul ul {
+            position: relative;
+            display: none;
+        }
+        
+        ul ul li {
+            display: block;
+            width: 10rem;
+            padding: 0.5rem;
+            border: 0.1rem solid black;
+            margin: 0;
+            background-color: #e6ccb2;
+        }
+        
+        
+        ul li:hover ul {
+            position: absolute;
+            display: block;
+            background-color: #ede0d4;
+        }
+        ul li ul li {
+            font-family: "Inter-Medium";
+            font-size: 1rem;
+            text-transform: capitalize;
+        }
+    
+        .titulo1 {
+            font-size: 3rem;
+            padding: 1rem;
+        }
+    
+        .visitaGuiada {
+            width: 70%;
+        }
+        
+        .textoPrincipal {
+            font-size: 1.6rem;
+        }
+    
+        .textoDestacado {
+            font-size: 1.8rem;
+        }
+    
+        .reservarVisita {
+            font-size: 1.5rem;
+        }
+    
+        .titulo2 {
+            font-size: 2rem;
+        }
+    
+        footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+            "logo redes enlaces"
+            "logo redes enlaces"
+            "copyright copyright copyright";
+        }
+    
+        .footerLogo {
+            grid-area: logo;
+            justify-self: center;
+            align-self: center;
+        }
+    
+        .redesSociales {
+            grid-area: redes;
+            justify-self: center;
+            align-self: center;
+        }
+    
+        .footerEnlaces {
+            grid-area: enlaces;
+            justify-self: center;
+            align-self: center;
+        }
+    
+        .copyright {
+            grid-area: copyright;
+            justify-self: center;
+            align-self: center;
+        }
+    }

@@ -1,0 +1,642 @@
+/* Reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+
+/* Indicar fuentes a elegir */
+@font-face {
+    font-family: "NanumGothic-Regular";
+    src: url(../assets/fonts/NanumGothic-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Inter-Medium";
+    src: url(../assets/fonts/Inter-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Inter-Bold";
+    src: url(../assets/fonts/Inter-Bold.ttf);
+}
+
+/* Empieza */
+
+#grilla {
+    display: grid;
+    grid-template-rows: 85px 420px 40px 1275px 250px;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "header"
+    "main"
+    "encabezado"
+    "novedades"
+    "footer" ;
+}
+
+header {
+    grid-area: header;
+    background-color: #7f5539;
+    padding: 0.8rem;
+    border-bottom: 0.1rem solid white;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+div.logo {
+    display: flex;
+    align-self: center;
+}
+
+div.menu {
+    color: white;
+    font-size: 1.8rem;
+    display: flex;
+    align-self: center;
+}
+
+.enlaces {
+    display: none;
+}
+
+/*
+div.enlaces {
+    display: inline-block;
+    border: 0.1rem solid white;
+    background-color: #b08968;
+}
+
+div.ministerio {
+    display: block;
+    margin-left: 69rem;
+    padding: 0;
+}
+
+.logoMinisterio {
+    width: 14rem;
+}
+
+ul {
+    font-size: 0;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+    font-family: "Inter-Bold";
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+}
+
+li a {
+    color: #fff;
+}
+
+li a:hover {
+    color: black;
+}
+
+ul li ul li a {
+    color: black;
+}
+
+ul li ul li a:hover {
+    color: white;
+}
+
+ul ul {
+    position: relative;
+    display: none;
+}
+
+ul ul li {
+    display: block;
+    width: 10rem;
+    padding: 0.5rem;
+    border: 0.1rem solid black;
+    margin: 0;
+    background-color: #e6ccb2;
+}
+
+
+ul li:hover ul {
+    position: absolute;
+    display: block;
+    background-color: #ede0d4;
+}
+ul li ul li {
+    font-family: "Inter-Medium";
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+*/
+.mainIndex {
+    grid-area: main;
+    background-image: url(../assets/img/fototeatro3.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.h1Index {
+    font-family: "Inter-Bold";
+    color: white;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.textoPrincipal {
+    font-family: "NanumGothic-Regular";
+    color: white;
+    font-size: 1rem;
+    text-align: right;
+    padding: 1rem;
+}
+
+.textoDestacado {
+    font-family: "NanumGothic-Regular";
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bolder;
+    padding: 1rem;
+}
+
+.reservarVisita {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4rem;
+    border-radius: 7px;
+    font-family: "Inter-Bold";
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.visitaGuiada {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+    grid-area: encabezado;
+    font-family: "Inter-Bold";
+    font-size: 1.3rem;
+    text-align: center;
+    background-color: #7f5539;
+    color: white;
+    border-bottom: 0.1rem solid white;
+    border-top: 0.1rem solid white;
+    padding: 0.2rem 0;
+}
+
+.noticia {
+    grid-area: novedades;
+    padding: 0 1rem;     
+    grid-row-gap: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    overflow: hidden;
+    background-color: #ede0d4;
+    justify-content: center;
+    align-content: center;
+}
+
+.noticiaVideo h3 {
+    font-family: "NanumGothic-Regular";
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.noticiaVideo p {
+    font-family: "NanumGothic-Regular";
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.noticiaVideo iframe {
+    width: 100%;
+    height: 10rem;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #7f5539;
+    border-top: 0.1rem solid white;
+    padding: 0.5rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.footerLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redesSociales {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.footerEnlaces {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer i {
+    padding: 0.5rem;
+}
+
+footer a {
+    color: white;
+    font-family: "NanumGothic-Regular";
+}
+
+footer a:hover {
+    color: black;
+}
+.copyright {
+    color: white;
+    font-family: "NanumGothic-Regular";
+    text-align: center;
+    display: flex;
+}
+
+@media screen and (min-width: 768px) {
+    
+    #grilla {
+        display: grid;
+        grid-template-areas:
+        "header header"
+        "main main"
+        "encabezado encabezado"
+        "novedades novedades"
+        "footer footer";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 95px 550px 50px 1050px 250px;
+    }
+    
+    header {
+        padding: 1rem;
+    }
+    
+    .mainIndex {
+        justify-content: end;
+    }
+    
+    .visitaGuiada {
+        display: flex;
+        flex-flow: column wrap;
+        width: 60%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .enlaces {
+        display: none;
+    }
+
+    .h1Index {
+        font-size: 2.3rem;
+        padding: 0;
+    }
+
+    .textoPrincipal {
+        font-size: 1.2rem;
+        padding-left: 5rem;
+    }
+
+    .textoDestacado {
+        font-size: 1.4rem;
+    }
+
+    .reservarVisita {
+        font-size: 1.4rem;
+        padding: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .noticia {
+        background-color: #ede0d4;
+    }
+    
+    .noticiaVideo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "texto video";
+        grid-column-gap: 1rem;
+        padding: 1rem 1rem;
+        height: 15rem;
+    }
+
+    .noticiaTexto {
+        grid-area: texto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+    }
+
+    .noticiaYoutube {
+        grid-area: video;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .noticiaVideo h3 {
+        font-size: 1.4rem;
+        padding-left: 1rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+    }
+
+    .noticiaVideo p {
+        font-size: 1.2rem;
+        padding-left: 1.5rem;
+    }
+
+    .noticia {
+        padding: 0.5rem 0;
+    }
+
+    .noticiaVideo iframe {
+        height: 100%;
+        width: 25rem;
+    }
+
+    .redesSociales {
+        font-size: 2rem;
+    }
+
+    .footerEnlaces {
+        font-size: 1.3rem;
+    }
+
+@media screen and (min-width: 1024px) {
+    
+    #grilla {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 110px 600px 50px 1400px 250px;
+        grid-template-areas:
+        "header header"
+        "main main"
+        "encabezado encabezado"
+        "novedades novedades"
+        "footer footer";
+    }
+    
+    header {
+        padding: 1.5rem;
+    }
+
+    div.menu {
+        display: none;
+    }
+    
+    .enlaces {
+        display: flex;
+        align-self: center;
+    }
+
+    ul {
+        font-size: 0;
+    }
+    
+    ul li {
+        display: inline-block;
+        position: relative;
+        font-family: "Inter-Bold";
+        font-size: 1.7rem;
+        text-transform: capitalize;
+        padding-right: 1.2rem;
+        padding-left: 1.2rem;
+    }
+    
+    li a {
+        color: #fff;
+    }
+    
+    li a:hover {
+        color: black;
+    }
+    
+    ul li ul li a {
+        color: black;
+    }
+    
+    ul li ul li a:hover {
+        color: white;
+    }
+    
+    ul ul {
+        position: relative;
+        display: none;
+    }
+    
+    ul ul li {
+        display: block;
+        width: 10rem;
+        padding: 0.5rem;
+        border: 0.1rem solid black;
+        margin: 0;
+        background-color: #e6ccb2;
+    }
+    
+    
+    ul li:hover ul {
+        position: absolute;
+        display: block;
+        background-color: #ede0d4;
+    }
+    ul li ul li {
+        font-family: "Inter-Medium";
+        font-size: 1rem;
+        text-transform: capitalize;
+    }
+
+    .h1Index {
+        font-size: 3rem;
+        padding: 1rem;
+    }
+
+    .visitaGuiada {
+        width: 70%;
+    }
+    
+    .textoPrincipal {
+        font-size: 1.6rem;
+    }
+
+    .textoDestacado {
+        font-size: 1.8rem;
+    }
+
+    .reservarVisita {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .noticiaVideo {
+        height: 20rem;
+    }
+    
+    .noticiaVideo h3 {
+        font-size: 1.8rem;
+    }
+
+    .noticiaVideo p {
+        font-size: 1.6rem;
+    }
+
+    .noticiaVideo iframe {
+        width: 30rem;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "logo redes enlaces"
+        "logo redes enlaces"
+        "copyright copyright copyright";
+    }
+
+    .footerLogo {
+        grid-area: logo;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .redesSociales {
+        grid-area: redes;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .footerEnlaces {
+        grid-area: enlaces;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .copyright {
+        grid-area: copyright;
+        justify-self: center;
+        align-self: center;
+    }
+}
+
+
+/* CSS página de contacto */
+
+/*
+.mainContacto {
+    background-image: url(../assets/img/sala001.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    height: 41rem;
+    width: 100%;
+    padding: 2rem 14rem;
+}
+
+.contacto {
+    width: 20rem;
+    height: 4rem;
+    text-transform: capitalize;
+    font-family: "Inter-Bold";
+    font-size: 2rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 0.3rem solid white;
+    margin: 1rem 0;
+}
+
+.formContacto {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-family: "NanumGothic-Regular";
+    font-size: 1.2rem;
+    height: 28rem;
+    border: 0.3rem solid white;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    text-align: left;
+}
+*/
+/* CSS página de entradas */
+
+/*
+.mainEntradas {
+    background-image: url(../assets/img/fotoentrada.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    height: 41rem;
+    width: 100%;
+    padding: 2rem 2rem;
+}
+
+.boleterias {
+    width: 30rem;
+    height: 4rem;
+    text-transform: capitalize;
+    font-family: "Inter-Bold";
+    font-size: 2rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 0.3rem solid white;
+    margin: 1rem 0;
+}
+
+.mapa {
+    width: 20rem;
+    height: 20rem;
+    border: 0.2rem solid #ede0d4;
+    border-radius: 2rem;
+}
+
+.mapaUbicacion {
+    display: inline-block;
+    padding: 1rem;
+} */
