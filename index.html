@@ -4,104 +4,185 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="shortcut icon" href="assets/img/nuevofavicon1.png">
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Teatro del Bicentenario - San Juan</title>
+    <title>Desafio Bootstrap</title>
 </head>
 <body>
-    <div id="grilla">
-        <header>
-            <nav>
-                <!-- <div class="ministerio">
-                    <a href="https://turismo.sanjuan.gob.ar/" target="_blank"><img src="assets/img/marcagobiernomintur.png" alt="logo ministerio de cultura" class="logoMinisterio"></a>
-                    </div> -->
-                <div class="logo">
-                <a href="index.html"><img src="assets/img/logoteatroblanco.png" alt="logo sitio" class="logoSitio"></a>
-                </div>
-                <div class="enlaces">
-                    <ul>
-                        <li><a href="index.html">inicio</a></li>
-                        <li><a href="pages/galeria.html">galería</a></li>
-                        <li><a href="pages/edificio.html">edificio</a>
-                            <ul>
-                                <li><a href="">sala principal</a></li>
-                                <li><a href="">sala auditórium</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="pages/ubicacion.html">ubicación</a></li>
-                        <li><a href="pages/contacto.html">contacto</a></li>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="assets/img/logoteatroblanco.png" alt="Logo sitio" ></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/galeria.html">Galería</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Edificio</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="pages/salaprincipal.html">Sala Principal</a></li>
+                      <li><a class="dropdown-item" href="pages/sala2.html">Sala Auditorium</a></li>
                     </ul>
-                </div>
-                <div class="menu">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </nav>
-        </header>
-        <main class="mainIndex">
-            <article class="visitaGuiada">
-                <h1 class="h1Index">Ya están habilitadas las visitas guiadas</h1>
-                <p class="textoPrincipal">La Visita Guiada del Teatro del Bicentenario ofrece a los visitantes la oportunidad de conocer y valorar el TB como patrimonio cultural de todos los sanjuaninos y sanjuaninas a través de un recorrido exclusivo por distintos sectores del establecimiento: Sala Principal, Sala Auditórium, salas de ensayo, caracterización y otros.</p>
-                <!--<p class="textoPrincipal">La visita se despliega en diferentes estaciones informativas y con actividades sensoriales e interactivas, que brindan todos los detalles de la historia, la arquitectura y el diseño del TB. Además, quienes participen podrán acceder a información sobre la práctica de actividades artísticas que se desarrollan en #NuestroTeatro como la danza, el teatro, el canto y la música.</p>
-                -->
-                <p class="textoDestacado">Las visitas guiadas son gratuitas, requieren reserva</p>
-                <a href=""><p class="reservarVisita">RESERVAR VISITA</p></a>
-            </article>
-        </main>
-        <h2>Novedades del Teatro</h2>
-        <section class="noticia">
-            <article class="noticiaVideo">
-                <div class="noticiaTexto">
-                    <h3>La Bohème</h3>
-                    <p>La ópera verista de Puccini más representada del mundo en una nueva coproducción con el Teatro Colón llega al Teatro del Bicentenario.</p>
-                </div>
-                <div class="noticiaYoutube">    
-                    <iframe src="https://www.youtube.com/embed/ibE2nowuaGA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </article> 
-            <article class="noticiaVideo">
-                <div class="noticiaTexto">
-                    <h3>"Marcha para la ceremonia de los turcos"</h3>
-                    <p>En el marco de nuestro mes aniversario, el Jueves 21 de octubre a las 20hs nuestro teatro presenta este GRAN ESTRENO</p>
-                </div>
-                <div class="noticiaYoutube">
-                    <iframe src="https://www.youtube.com/embed/qw8D4keizkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </article>
-            <article class="noticiaVideo">
-                <div class="noticiaTexto">
-                    <h3>Resumen 5 años del Teatro del Bicentenario</h3>
-                    <p>Un recorrido por las memorias y los momentos mágicos que se vivieron desde un principio en el polo cultural sanjuanino.</p>
-                </div>
-                <div class="noticiaYoutube">
-                    <iframe src="https://www.youtube.com/embed/HeFL74V0qTQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </article> 
-            <article class="noticiaVideo">
-                <div class="noticiaTexto">
-                    <h3>"Después de todo", una obra vanguardista</h3>
-                    <p>El Gobierno de San Juan, a través del Teatro del Bicentenario, conmemora los 212 años de la Revolución de Mayo con un increíble espectáculo...</p>
-                </div>
-                <div class="noticiaYoutube">
-                    <iframe src="https://www.youtube.com/embed/JkDlsus89pY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </article>
-        </section>
-        <footer>
-            <div class="footerLogo">
-                <a href="index.html"><img src="assets/img/logoteatroblanco.png" alt="logo sitio" class="logoSitio"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="redesSociales">
-                <h3><a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square"></i></a></h3>
-                <h3><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></h3>
+          </nav>
+    </header>
+    <main>
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+        </div>
+      
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/img/carousel1.jpg" alt="Los Angeles" class="imgCarrusel">
+            <div class="carousel-caption">
+              <h3>“REQUIEM”</h3>
+              <p>La impactante producción del Teatro del Bicentenario con sello internacional</p>
             </div>
-            <div class="footerEnlaces">
-                <h3><a href="pages/contacto.html">Contacto</a></h3> 
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/carousel2.png" alt="Chicago" class="imgCarrusel">
+            <div class="carousel-caption">
+              <h3>“VAMOS A JUGAR!”</h3>
+              <p>El espectáculo musical para toda la familia llega a la Sala Auditórium del TB el próximo sábado</p>
             </div>
-            <div class="copyright">
-                <p>Todos los derechos reservados 2022© / Valentino Muchino - CoderHouse</p>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/carousel3.jpg" alt="New York" class="imgCarrusel">
+            <div class="carousel-caption">
+              <h3>"DUALIDAD"</h3>
+              <p>El trío hará vibrar la Sala Auditórium del TB con su poderoso sonido el próximo sábado</p>
             </div>
-        </footer>
-    </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/carousel4.jpg" alt="New York" class="imgCarrusel">
+            <div class="carousel-caption">
+              <h3>"PROPUESTA INVERNAL"</h3>
+              <p>El polo cultural sanjuanino ofrece una diversidad de espectáculos artísticos para las vacaciones</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </main>
+    <section class="visitaGuiada">
+      <div class="mt-4 p-5 text-white">
+        <h1>Ya están habilitadas las visitas guiadas</h1>
+        <p>La Visita Guiada del Teatro del Bicentenario ofrece a los visitantes la oportunidad de conocer y valorar el TB como patrimonio cultural de todos los sanjuaninos y sanjuaninas a través de un recorrido exclusivo por distintos sectores del establecimiento: Sala Principal, Sala Auditórium, salas de ensayo, caracterización y otros.</p>
+        <p class="lead">Las visitas guiadas son gratuitas, requieren reserva.</p>
+        <a href="#" class="btn btn-warning">Reservar Visita</a>
+      </div>
+    </section>
+    <section class="novedades" class="container-fluid p-0">
+      <h2 class="m-0 encabezadoNovedades">Novedades del Teatro</h2>
+      <div class="d-flex justify-content-around m-0 p-4">
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="assets/img/noti1.jpg" alt="noticia del teatro">
+            <div class="card-body">
+              <h4 class="card-title">ATENCIÓN ARTISTAS: CONVOCATORIA ABIERTA PARA REDISEÑAR LAS LETRAS CORPÓREAS DEL TB 2022</h4>
+              <p class="card-text">El Teatro del Bicentenario abre convocatoria para la presentación de proyectos artísticos para rediseñar las letras corpóreas</p>
+              <a href="#" class="btn btn-outline-dark">Leer más</a>
+            </div>
+          </div>
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="assets/img/noti2.jpeg" alt="noticia del teatro">
+            <div class="card-body">
+              <h4 class="card-title">“CON LA MÚSICA A OTRA PARTE”: 1000 ALUMNOS VIVIRÁN UNA INOLVIDABLE EXPERIENCIA ARTÍSTICA EN EL TB</h4>
+              <p class="card-text">Muy pronto, adolescentes de escuelas de San Juan tendrán la posibilidad de vivir una experiencia artística y sensorial en el Teatro del Bicentenario</p>
+              <a href="#" class="btn btn-outline-dark">Leer más</a>
+            </div>
+          </div>
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="assets/img/noti3.jpg" alt="noticia del teatro">
+            <div class="card-body">
+              <h4 class="card-title">JÓVENES MÚSICOS PODRÁN INSCRIBIRSE HASTA EL 6 DE AGOSTO PARA EL FESTIVAL INDIANA 2022</h4>
+              <p class="card-text">Se trata de una oportunidad única para el desarrollo y perfeccionamiento de las habilidades técnicas e interpretativas de jóvenes músicos y estudiantes en las especialidades de cuerda, piano y en el género jazz-rock.</p>
+              <a href="#" class="btn btn-outline-dark">Leer más</a>
+            </div>
+          </div>
+      </div>
+      <div class="d-flex justify-content-around m-0 p-4">
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="assets/img/noti4.jpg" alt="noticia del teatro">
+          <div class="card-body">
+            <h4 class="card-title">SOLEDAD ARRANZ INUNDA LA SALA AUDITÓRIUM DEL TB DE ROCK Y GROOVE</h4>
+            <p class="card-text">El Ministerio de Turismo y Cultura, a través del Teatro del Bicentenario, presenta “Sesiones en Vinyl”, una muestra de las mejores canciones que conforman el repertorio de la cantante sanjuanina, Soledad Arranz.</p>
+            <a href="#" class="btn btn-outline-dark">Leer más</a>
+          </div>
+        </div>
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="assets/img/noti5.jpg" alt="noticia del teatro">
+          <div class="card-body">
+            <h4 class="card-title">POR LOCALIDADES AGOTADAS, MIGUEL MATEOS AGREGA NUEVA FUNCIÓN EN EL TB</h4>
+            <p class="card-text">En su segunda función, el jefe del rock nacional trae lo mejor de su inoxidable repertorio al TB</p>
+            <a href="#" class="btn btn-outline-dark">Leer más</a>
+          </div>
+        </div>
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="assets/img/noti6.jpg" alt="noticia del teatro">
+          <div class="card-body">
+            <h4 class="card-title">EL TB CONVOCA A BAILARINES DE DANZAS ESPAÑOLAS PARA LA OBRA REQUIEM</h4>
+            <p class="card-text">La selección será en modalidad online y habrá tiempo de inscribirse hasta el próximo jueves</p>
+            <a href="#" class="btn btn-outline-dark">Leer más</a>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center p-4">
+        <a href="#" class="btn btn-dark btn-lg">Ver todas las novedades</a>
+      </div>
+    </section>
+    <footer class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 text-center" class="footerLogo">
+          <a href="index.html"><img src="assets/img/logoteatroblanco.png" alt="logo sitio" class="logoSitio"></a>
+        </div>
+        <div class="col-md-4 text-center" class="redesSociales">
+          <h3><a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square"></i></a></h3>
+          <h3><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></h3>
+        </div>
+        <div class="col-md-4 text-center footerEnlaces">
+          <h3><a href="pages/contacto.html">Contacto</a></h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="copyright" class="col-md-12">
+          <p>Todos los derechos reservados 2022© / Valentino Muchino - CoderHouse</p>
+        </div>
+      </div>
+    </footer>
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>   
 </body>
 </html>

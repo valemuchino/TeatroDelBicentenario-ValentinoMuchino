@@ -4,101 +4,128 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="shortcut icon" href="../assets/img/nuevofavicon1.png">
     <link rel="stylesheet" href="../css/estilos.css">
-    <title>Teatro del Bicentenario - San Juan</title>
+    <title>Desafio Bootstrap</title>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="ministerio">
-                <a href="https://turismo.sanjuan.gob.ar/" target="_blank"><img src="../assets/img/marcagobiernomintur.png" alt="logo ministerio de cultura" class="logoMinisterio"></a>
-                </div>
-            <div class="logo">
-            <a href="../index.html"><img src="../assets/img/logoteatroblanco.png" alt="logo sitio" class="logoSitio"></a>
-            </div>
-            <div class="enlaces">
-                <ul>
-                    <li><a href="../index.html">inicio</a></li>
-                    <li><a href="entradas.html">entradas</a></li>
-                    <li><a href="salas.html">salas</a>
-                        <ul>
-                            <li><a href="">sala principal</a></li>
-                            <li><a href="">sala auditórium</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="ubicacion.html">ubicación</a></li>
-                    <li><a href="contacto.html">contacto</a></li>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="../assets/img/logoteatroblanco.png" alt="Logo sitio" ></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="galeria.html">Galería</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Edificio</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="salaprincipal.html">Sala Principal</a></li>
+                      <li><a class="dropdown-item" href="sala2.html">Sala Auditorium</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Contacto</a>
+                  </li>
                 </ul>
+              </div>
             </div>
-        </nav>
+          </nav>
     </header>
-    <main class="mainContacto">
-        <h2 class="contacto">contacto</h2>
-        <article class="formContacto">
-            <p>Para recibir una respuesta, porfavor complete el siguiente formulario:</p>
-            <br>
-            <form action="enviar.php" method="post" enctype="text/plain">
-                <label for="nombre"> Nombre:
-                    <input type="text" name="nombre" placeholder="Escribe tu nombre" required> 
-                </label>
-                <br>
-                <label for="apellido"> Apellido:
-                    <input type="text" name="apellido" placeholder="Escribe tu apellido" required>
-                </label>
-                <br>
-                <label for="email"> Correo Electrónico:
-                    <input type="email" name="email" placeholder="Escribe tu email" required>
-                </label>
-                <br>
-                <label for="telefono"> Teléfono (opcional):
-                    <input type="number" name="telefono" placeholder="Escribe tu teléfono">
-                </label>
-                <br>
-                <label for="sexo"> Indique su sexo:
-                    <input type="radio" name="sexo" value="femenino"> Femenino
-                    <input type="radio" name="sexo" value="masculino"> Masculino
-                    <input type="radio" name="sexo" value="noespecifica"> Sin especificar
-                </label>
-                <br>
-                <label for="tipoconsulta">¿De qué trata su consulta?
-                <select name="tipoconsulta">
-                    <option value="ticketeras">Ticketeras habilitadas</option>
-                    <option value="proximasobras">Próximas obras de teatro</option>
-                    <option value="visitasguiadas">Visitas guiadas</option>
-                    <option value="eventosespeciales">Eventos especiales</option>
-                    <option value="other">Otra consulta</option>
-                </select>
-                </label>
-                <br>
-                <label for="comentarios"> Escriba comentarios adicionales:
-                    <br>
-                    <textarea placeholder="Escriba sus comentarios" rows="5" cols="30"></textarea>
-                </label>
-                <br>
-                <label for="suscripcion"> ¿Te gustaría recibir información sobre eventos y obras nuevas en tu correo electrónico?
-                    <input type="checkbox" name="suscripcion" checked>
-                </label>
-                <br>  
-                    <input type="submit" value="Enviar">
-                    <input type="reset" value="Restablecer datos">
-            </form>
-        </article>
+    <main>
+        <section>
+            <div class="m-0 p-4 bg-dark text-white text-center">
+                <h2>Formulario de Contacto</h2>
+                <p>Para recibir una respuesta, por favor complete el siguiente formulario:</p>
+            </div>
+        </section>
+        <section>
+            <div class="m-0 p-4 bg-dark text-white">
+                <form action="">
+                    <div class="mb-3 mt-3">
+                      <label for="fname" class="form-label">Nombre:</label>
+                      <input type="text" class="form-control" id="fname" placeholder="Escriba su nombre" name="fname" required>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="lname" class="form-label">Apellido:</label>
+                        <input type="text" class="form-control" id="lname" placeholder="Escriba su apellido" name="lname" required>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Escriba su email" name="email" required>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="phone" class="form-label">Teléfono (opcional):</label>
+                        <input type="number" class="form-control" id="phone" placeholder="Escriba su teléfono" name="phone" required>
+                    </div>
+                    <div>
+                        <p>Indique su sexo:</p>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="sexofemenino" name="optradio" value="femenino">Femenino
+                            <label class="form-check-label" for="sexofemenino"></label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="sexomasculino" name="optradio" value="masculino">Masculino
+                            <label class="form-check-label" for="sexomasculino"></label>
+                        </div>
+                    </div>
+                    <div>
+                        <p>¿De qué trata su consulta?</p>
+                        <select class="form-select">
+                            <option>Puntos de Venta</option>
+                            <option>Próximas Obras de Teatro</option>
+                            <option>Visitas Guiadas</option>
+                            <option>Eventos Especiales</option>
+                            <option>Otra consulta</option>
+                          </select>
+                    </div>
+                    <div>
+                        <label for="comment">Escriba comentarios adicionales:</label>
+                        <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                    </div>
+                    <div class="form-check mb-3">
+                        <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="remember" checked>¿Te gustaría recibir información sobre eventos y obras nuevas en tu correo electrónico?
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                  </form>
+            </div>
+        </section>
     </main>
-    <footer>
-        <div class="footerLogo">
+    <footer class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 text-center" class="footerLogo">
             <a href="../index.html"><img src="../assets/img/logoteatroblanco.png" alt="logo sitio" class="logoSitio"></a>
+          </div>
+          <div class="col-md-4 text-center" class="redesSociales">
+            <h3><a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square"></i></a></h3>
+            <h3><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></h3>
+          </div>
+          <div class="col-md-4 text-center footerEnlaces">
+            <h3><a href="contacto.html">Contacto</a></h3>
+          </div>
         </div>
-        <div class="redesSociales">
-            <h3><a href="https://es-la.facebook.com/" target="_blank">Visitá nuestro facebook</a></h3>
-            <h3><a href="https://www.instagram.com/" target="_blank">Visitá nuestro instagram</a></h3>
-        </div>
-        <div class="footerEnlaces">
-            <h3><a href="contacto.html">Contacto</a></h3> 
-        </div>
-        <div class="copyright">
+        <div class="row">
+          <div class="copyright" class="col-md-12">
             <p>Todos los derechos reservados 2022© / Valentino Muchino - CoderHouse</p>
+          </div>
         </div>
     </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    
 </body>
 </html>
